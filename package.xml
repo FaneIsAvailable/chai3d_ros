@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<package>
+  <name>chai3d_ros</name>
+  <version>0.0.0</version>
+  <description>ROS Melodic driver node for haptic devices supported by the CHAI3D haptics SDK.</description>
+
+  <maintainer email="stefan.spiss@student.uibk.ac.at">Stefan Spiss</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <run_depend>geometry_msgs</run_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>rospy</run_depend>
+  <run_depend>std_msgs</run_depend>
+
+  <export>
+  </export>
+</package>

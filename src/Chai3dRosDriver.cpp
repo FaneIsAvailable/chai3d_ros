@@ -29,7 +29,7 @@ Chai3dRosDriver::Chai3dRosDriver(ros::NodeHandle node, float loopRate, std::stri
     this->force_sub = this->node.subscribe<geometry_msgs::Vector3>(this->forceSubTopic, 1,
                                                                    &Chai3dRosDriver::forceCallback, this);
     
-    this->linear_sub = this->node.subscribe<geometry_msgs::Vector3>("linear_lock_topic", 1, &Chai3dRosDriver::LinearMotionCallback, this);
+    this->linear_sub = this->node.subscribe<geometry_msgs::Vector3>("/interface/lock_axis", 1, &Chai3dRosDriver::LinearMotionCallback, this);
     this->rate_pub = this->node.advertise<std_msgs::Float32>(this->rateTopic.c_str(),1);
     this->gripper_pub = this->node.advertise<geometry_msgs::Twist>("gripper_topic",1);
 }

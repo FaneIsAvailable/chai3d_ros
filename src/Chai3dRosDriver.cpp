@@ -11,8 +11,8 @@ Chai3dRosDriver::Chai3dRosDriver(ros::NodeHandle node, float loopRate, std::stri
                                  std::string rateTopic, bool forceOutput) :
         node(node), loopRate(loopRate), positionTopic(positionTopic), velocityTopic(velocityTopic),
         buttonsTopic(buttonsTopic), forceSubTopic(forceSubTopic), forceOutput(forceOutput), rateTopic(rateTopic),
-        position(0.0f, 0.0f, 0.0f), velocity(0.0f, 0.0f, 0.0f), force(0.0f, 0.0f, 0.0f), buttons(4, 0),goodForce(0.0f, 0.0f, 0.0f),LinearMotionCondition(0.0f,0.0f,0.0f),
-        hapticLoop(true), forceConsumed(true) {
+        position(0.0f, 0.0f, 0.0f), velocity(0.0f, 0.0f, 0.0f), force(0.0f, 0.0f, 0.0f), buttons(4, 0),goodForce(0.0f, 0.0f, 0.0f),
+        LinearMotionCondition(0.0f,0.0f,0.0f), hapticLoop(true), forceConsumed(true) {
     int initState = this->initFalcon();
     if(initState == 0) {
         std::cout << "Error, no device found!" << std::endl;
